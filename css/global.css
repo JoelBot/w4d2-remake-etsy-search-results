@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+header {
+  padding-top: 20px;
+}
+
+header {
+  height: auto;
+}
+
+#logo {
+  width: 100%;
+}
