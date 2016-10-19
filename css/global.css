@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+.clearfix {
+  overflow: auto;
+}
+
+body {
+  background-color: #F5F5F1;
+}
+
 header {
   padding-top: 20px;
 }
@@ -14,7 +22,16 @@ header {
   width: 100%;
 }
 
+#searchResultsSection {
+  display: block;
+}
+
 #searchResultsSection img {
-  padding: 0 auto;
   width: 100%;
+}
+
+#searchResultsSection .cardClass {
+  padding: 9px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }

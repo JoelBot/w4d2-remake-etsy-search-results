@@ -11,7 +11,8 @@
 // Declare your builder function
 function createResultCard(item) {
   var card = document.createElement('div')
-  card.classList.add('col-sm-3')
+  card.classList.add('col-sm-3', 'cardClass')
+  // card.setAttribute('id', 'cardID')
 
   var cardImageRow = document.createElement('div')
   cardImageRow.classList.add('row')
@@ -19,6 +20,7 @@ function createResultCard(item) {
   // cardImageRow.innerHTML = "<img src='" + item.image + "' />"
   console.log(cardImageRow)
   var cardImage = document.createElement('img')
+  cardImage.classList.add('col-sm-12')
   cardImage.src = item.image
 
   var cardTitleRow = document.createElement('div')
@@ -26,6 +28,7 @@ function createResultCard(item) {
   // cardTitleRow.setAttribute('class','row')
 
   var cardTitle = document.createElement('span')
+  cardTitle.classList.add('col-sm-12')
   cardTitle.innerText = item.title
 
   var cardCreatorAndPriceRow = document.createElement('div')
@@ -36,20 +39,24 @@ function createResultCard(item) {
 
   var cardSeller = document.createElement('span')
   cardSeller.innerHTML = item.seller
+  cardSeller.classList.add('text-muted')
 
   var priceCol = document.createElement('div')
   priceCol.setAttribute('class','col-sm-6 text-right')
 
   var cardPrice = document.createElement('span')
   cardPrice.innerHTML = accounting.formatMoney(item.price)
+  cardPrice.classList.add('text-success')
 
   document.querySelector('#searchResultsSection.row').appendChild(card)
 
 
   card.appendChild(cardImageRow)
   cardImageRow.appendChild(cardImage)
+
   card.appendChild(cardTitleRow)
   cardTitleRow.appendChild(cardTitle)
+
   card.appendChild(cardCreatorAndPriceRow)
   cardCreatorAndPriceRow.appendChild(sellerCol)
   sellerCol.appendChild(cardSeller)

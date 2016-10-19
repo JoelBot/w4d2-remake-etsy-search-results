@@ -3,6 +3,12 @@
     // border: 1px solid black;
 
 }
+.clearfix {
+    overflow: auto;
+}
+body {
+    background-color: #F5F5F1;
+}
 header {
     padding-top: 20px;
     // padding-bottom: 20px;
@@ -19,10 +25,24 @@ header {
 #logo {
     width: 100%;
 }
+.col-sm-3 {
+    // padding-right: 20px;
+    // margin-left: 20px;
 
+    // border: 1px solid red;
+}
 #searchResultsSection {
+        display: block;
     img {
-        padding: 0 auto;
+        // padding: 0 auto;
         width: 100%;
+        // margin-left: 15px;
+        // display: block;
+    }
+    .cardClass {
+        padding: 9px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        // background-color: white;
     }
 }
