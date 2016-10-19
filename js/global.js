@@ -10,8 +10,11 @@
 
 // Declare your builder function
 function createResultCard(item) {
+  var col = document.createElement('div')
+  col.classList.add('col-sm-3')
+
   var card = document.createElement('div')
-  card.classList.add('col-sm-3', 'cardClass', 'well')
+  card.classList.add('card', 'well') // removed col-sm-3
   // card.setAttribute('id', 'cardID')
 
   var cardImageRow = document.createElement('div')
@@ -35,21 +38,22 @@ function createResultCard(item) {
   cardCreatorAndPriceRow.setAttribute('class','row')
 
   var sellerCol = document.createElement('div')
-  sellerCol.setAttribute('class','col-sm-6')
+  sellerCol.setAttribute('class','col-xs-6')
 
   var cardSeller = document.createElement('span')
   cardSeller.innerHTML = item.seller
   cardSeller.classList.add('text-muted')
 
   var priceCol = document.createElement('div')
-  priceCol.setAttribute('class','col-sm-6 text-right')
+  priceCol.setAttribute('class','col-xs-6 text-right')
 
   var cardPrice = document.createElement('span')
   cardPrice.innerHTML = accounting.formatMoney(item.price)
   cardPrice.classList.add('text-success')
 
-  document.querySelector('#searchResultsSection.row').appendChild(card)
+  document.querySelector('#searchResultsSection').appendChild(col)
 
+  col.appendChild(card) // This is new
 
   card.appendChild(cardImageRow)
   cardImageRow.appendChild(cardImage)
@@ -75,12 +79,87 @@ function createResultCard(item) {
 
 // Call your builder function, one at a time to make 12 search result cards, each with different data (image can be the same at this point if you want)
 // Don't forget you can use a for() loop, or make an array of objects even and use a items.forEach() loop.
-for (var i = 0; i < 12; i++) {
-  createResultCard(
+// for (var i = 0; i < 12; i++) {
+var items = [
     {
-      image: 'img/boardgame.png',
-      title: 'Vintage Board Game Art Wall Home Decor',
-      seller: 'franz66',
-      price: 15.00
-    })
-  }
+    image: 'http://unsplash.it/200?image=',
+    title: 'Vintage Board Game Art Wall Home Decor blargle blargle blargle blargle',
+    seller: 'franz66',
+    price: 15.00
+  },
+  {
+    image: 'http://unsplash.it/200?image=',
+    title: 'Vintage Board Game Art Wall Home Decor blargle blargle blargle blargle',
+    seller: 'franz66',
+    price: 15.00
+  },
+  {
+    image: 'http://unsplash.it/200?image=',
+    title: 'Vintage Board Game Art Wall Home Decor blargle blargle blargle blargle',
+    seller: 'franz66',
+    price: 15.00
+  },
+  {
+    image: 'http://unsplash.it/200?image=',
+    title: 'Vintage Board Game Art Wall Home Decor blargle blargle blargle blargle',
+    seller: 'franz66',
+    price: 15.00
+  },
+  {
+    image: 'http://unsplash.it/200?image=',
+    title: 'Vintage Board Game Art Wall Home Decor blargle blargle blargle blargle',
+    seller: 'franz66',
+    price: 15.00
+  },
+  {
+    image: 'http://unsplash.it/200?image=',
+    title: 'Vintage Board Game Art Wall Home Decor blargle blargle blargle blargle',
+    seller: 'franz66',
+    price: 15.00
+  },
+  {
+    image: 'http://unsplash.it/200?image=',
+    title: 'Vintage Board Game Art Wall Home Decor blargle blargle blargle blargle',
+    seller: 'franz66',
+    price: 15.00
+  },
+  {
+    image: 'http://unsplash.it/200?image=',
+    title: 'Vintage Board Game Art Wall Home Decor blargle blargle blargle blargle',
+    seller: 'franz66',
+    price: 15.00
+  },
+  {
+    image: 'http://unsplash.it/200?image=',
+    title: 'Vintage Board Game Art Wall Home Decor blargle blargle blargle blargle',
+    seller: 'franz66',
+    price: 15.00
+  },
+  {
+    image: 'http://unsplash.it/200?image=',
+    title: 'Vintage Board Game Art Wall Home Decor blargle blargle blargle blargle',
+    seller: 'franz66',
+    price: 15.00
+  },
+  {
+    image: 'http://unsplash.it/200?image=',
+    title: 'Vintage Board Game Art Wall Home Decor blargle blargle blargle blargle',
+    seller: 'franz66',
+    price: 15.00
+  },
+  {
+    image: 'http://unsplash.it/200?image=',
+    title: 'Vintage Board Game Art Wall Home Decor blargle blargle blargle blargle',
+    seller: 'franz66',
+    price: 15.00
+  },
+]
+// add function makeCards(cardItems)  this will let me run the search and populate based on the value in the search box
+// add document.querySelector('resultssetcionid').innerHTML = ''
+items.forEach(function(item, i){
+  item.title += i
+  item.image += i
+  item.seller += i
+  createResultCard(item)
+  console.log(item)
+})

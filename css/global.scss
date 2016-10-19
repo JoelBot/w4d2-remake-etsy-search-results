@@ -4,6 +4,9 @@ $linkFontColor : #0192B5;
     // border: 1px solid black;
 
 }
+img {
+    width: 100%;
+}
 .clearfix {
     overflow: auto;
 }
@@ -75,17 +78,25 @@ header {
 
 }
 #searchResultsSection {
-        display: block;
+        // display: inline-block;
     img {
-        // padding: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
         width: 100%;
         // margin-left: 15px;
         // display: block;
     }
-    .cardClass {
-        padding: 9px;
-        margin-top: 15px;
-        margin-bottom: 15px;
+    .card {
+        // padding: 9px;
+        // margin-top: 15px;
+        // margin-bottom: 15px;
+        box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
         // background-color: white;
+    }
+    span {
+        display: inline-block;
+        text-overflow: ellipsis; // this is what makes the "..."s without wrapping text around to next line
+        overflow: hidden; // requires overflow and white-space to text-oerflow
+        white-space: nowrap;
     }
 }

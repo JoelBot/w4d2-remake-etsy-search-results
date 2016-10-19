@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+img {
+  width: 100%;
+}
+
 .clearfix {
   overflow: auto;
 }
@@ -66,16 +70,19 @@ header {
   width: 100%;
 }
 
-#searchResultsSection {
-  display: block;
-}
-
 #searchResultsSection img {
+  padding-left: 0;
+  padding-right: 0;
   width: 100%;
 }
 
-#searchResultsSection .cardClass {
-  padding: 9px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+#searchResultsSection .card {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+#searchResultsSection span {
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
