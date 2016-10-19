@@ -19,70 +19,84 @@
         <div class="input-group">
           <input type="text" class="form-control" placeholder="Search for...">
           <span class="input-group-btn">
-            <button id="searchButton" class="btn btn-success" type="button">Go!</button>
+            <button id="searchButton" class="btn btn-info" type="button">Search</button>
           </span>
         </div><!-- /input-group -->
       </div>
-      <div class='col-sm-3 pull-right'>
-        nav links and cart icom
+      <div id="navAndCart" class='col-sm-3 pull-right'>
+        <a href="#">Sell on Etsy</a>
+        <a href="#">Register</a>
+        <button type="button" class="btn btn-default navbar-btn">Sign in</button>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <button type='button'>Clickety</button>
-        <button type='button'>Clickety</button>
-        <button type='button'>Clickety</button>
-        <button type='button'>Clickety</button>
-        <button type='button'>Clickety</button>
-        <button type='button'>Clickety</button>
-        <button type='button'>Clickety</button>
-        <button type='button'>Clickety</button>
-      </div>
+    <div id="headerNav" class="row">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#">Clothing & Accessories</a></li>
+              <li><a href="#">Jewelry</a></li>
+              <li><a href="#">Craft Supplies & Tools</a></li>
+              <li><a href="#">Weddings</a></li>
+              <li><a href="#">Entertainment</a></li>
+              <li><a href="#">Home & living</a></li>
+              <li><a href="#">Kids & Baby</a></li>
+              <li><a href="#">Vintage</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
     </div>
   </header>
 
   <div class='container-fluid'>
     <div class="row">
-      <div class="col-sm-2">
-        Show results for: <br />
-        <div class="panel-body">
+      <div id="leftNav" class="col-sm-2">
+        <h5>Show results for:</h5>
+
           <div class="row">
             <div class="col-sm-12">
-              <a href="#">All categories</a><br />
-              &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Toys & Games</a><br />
-              &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Art & Collectibles</a><br />
-              &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Craft Supplies & Tools</a><br />
-              &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Home & Living</a><br />
-              &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Books, Movies & Music</a><br />
-              &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Paper & Party Supplies</a><br />
-              &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Accessories</a><br />
-              &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Clothing</a><br />
-              &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Electronics & Accessories</a><br />
-              &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Jewelry</a><br />
-              &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Weddings</a><br />
-              &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Bags & Purses</a><br />
+
+              <div class="well">
+                <a href="#">All categories</a><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Toys & Games</a><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Art & Collectibles</a><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Craft Supplies & Tools</a><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Home & Living</a><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Books, Movies & Music</a><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Paper & Party Supplies</a><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Accessories</a><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Clothing</a><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Electronics & Accessories</a><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Jewelry</a><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Weddings</a><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Bags & Purses</a><br />
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <br />Refine your search
-            <div class="panel-body">
 
-              Shop location
+          <div class="row">
 
-              Shop location
-              Anywhere
-              United States
-              Choose a custom location
-
+            <div class="col-sm-12">
+            <h5>Refine your search</h5>
+              <div class="well">
+                <h5>Shop location</h5>
+                <input type="radio">  <a href="#">Anywhere</a></input> <br />
+                <input type="radio">  <a href="#">United States</a></input><br />
+                <a href="#">Choose a custom location</a> <br />
+                <hr />
+                <h5>Item type</h5>
+                <input type="radio">  <a href="#">All items</a></input><br />
+                <input type="radio">  <a href="#">Handmade</a></input><br />
+                <input type="radio">  <a href="#">Vintage</a></input><br />
+                <hr />
+              </div>
             </div>
           </div>
-        </div>
 
       </div>
 
-      <div class="col-sm-10 ">
+      <div class="col-sm-10">
         main content
         <div class="row" id='searchResultsSection'>
         </div>

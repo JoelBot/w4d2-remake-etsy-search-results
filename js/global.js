@@ -11,7 +11,7 @@
 // Declare your builder function
 function createResultCard(item) {
   var card = document.createElement('div')
-  card.classList.add('col-sm-3', 'cardClass')
+  card.classList.add('col-sm-3', 'cardClass', 'well')
   // card.setAttribute('id', 'cardID')
 
   var cardImageRow = document.createElement('div')
